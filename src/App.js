@@ -13,7 +13,7 @@ class App extends React.Component{
     score: 0
   }
   handleLogin = (player, boolean) => {
-    this.setState({player:player, showLogin: boolean});
+    this.setState({ player: player, showLogin: boolean });
   };
 
   handleRestart = (boolean) => {
@@ -24,13 +24,12 @@ class App extends React.Component{
     }
   }; 
   
-  render(){
-    const {showLogin, player, score, showRestart} = this.setState;
+  render() {
+    const { showLogin, player, score, showRestart } = this.state;
     return (
     <div className="App">
-      <Login/>
-      {showLogin ? <Login player={this.handleLogin}/> : null}
-      {showRestart ? <Restart newGame={this.handleRestart}/> : null}
+        {showLogin ? <Login player={this.handleLogin}/> : null}
+      <GameInfo player={player} score={score}/>
     </div>
   );
 }}

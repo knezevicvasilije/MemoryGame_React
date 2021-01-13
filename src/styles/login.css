@@ -116,13 +116,13 @@ a:hover {
   text-decoration: underline;
 }
 .left {
-  float: left;
+  float: to left;
 }
 .right {
   float: right;
 }
 .alignleft {
-  float: left;
+  float: to left;
   margin-right: 15px;
 }
 .alignright {
@@ -145,27 +145,27 @@ form:after {
 #content {
   background: #f9f9f9;
   background: -moz-linear-gradient(
-    top,
+    to top,
     rgba(248, 248, 248, 1) 0%,
     rgba(249, 249, 249, 1) 100%
   );
   background: -webkit-linear-gradient(
-    top,
+    to top,
     rgba(248, 248, 248, 1) 0%,
     rgba(249, 249, 249, 1) 100%
   );
   background: -o-linear-gradient(
-    top,
+    to top,
     rgba(248, 248, 248, 1) 0%,
     rgba(249, 249, 249, 1) 100%
   );
   background: -ms-linear-gradient(
-    top,
+    to top,
     rgba(248, 248, 248, 1) 0%,
     rgba(249, 249, 249, 1) 100%
   );
   background: linear-gradient(
-    top,
+    to top,
     rgba(248, 248, 248, 1) 0%,
     rgba(249, 249, 249, 1) 100%
   );
@@ -201,27 +201,27 @@ form:after {
 #content h1:after {
   background: rgb(126, 126, 126);
   background: -moz-linear-gradient(
-    left,
+    to left,
     rgba(126, 126, 126, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
   background: -webkit-linear-gradient(
-    left,
+    to left,
     rgba(126, 126, 126, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
   background: -o-linear-gradient(
-    left,
+    to left,
     rgba(126, 126, 126, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
   background: -ms-linear-gradient(
-    left,
+    to left,
     rgba(126, 126, 126, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
   background: linear-gradient(
-    left,
+    to left,
     rgba(126, 126, 126, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
@@ -230,27 +230,27 @@ form:after {
 #content h1:before {
   background: rgb(126, 126, 126);
   background: -moz-linear-gradient(
-    right,
+    to right,
     rgba(126, 126, 126, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
   background: -webkit-linear-gradient(
-    right,
+    to right,
     rgba(126, 126, 126, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
   background: -o-linear-gradient(
-    right,
+    to right,
     rgba(126, 126, 126, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
   background: -ms-linear-gradient(
-    right,
+    to right,
     rgba(126, 126, 126, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
   background: linear-gradient(
-    right,
+    to right,
     rgba(126, 126, 126, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
@@ -260,27 +260,27 @@ form:after {
 #content:before {
   background: #f9f9f9;
   background: -moz-linear-gradient(
-    top,
+    to top,
     rgba(248, 248, 248, 1) 0%,
     rgba(249, 249, 249, 1) 100%
   );
   background: -webkit-linear-gradient(
-    top,
+    to top,
     rgba(248, 248, 248, 1) 0%,
     rgba(249, 249, 249, 1) 100%
   );
   background: -o-linear-gradient(
-    top,
+    to top,
     rgba(248, 248, 248, 1) 0%,
     rgba(249, 249, 249, 1) 100%
   );
   background: -ms-linear-gradient(
-    top,
+    to top,
     rgba(248, 248, 248, 1) 0%,
     rgba(249, 249, 249, 1) 100%
   );
   background: linear-gradient(
-    top,
+    to top,
     rgba(248, 248, 248, 1) 0%,
     rgba(249, 249, 249, 1) 100%
   );
@@ -361,27 +361,27 @@ form:after {
 #content form input[type="submit"] {
   background: rgb(254, 231, 154);
   background: -moz-linear-gradient(
-    top,
+    to top,
     rgba(254, 231, 154, 1) 0%,
     rgba(254, 193, 81, 1) 100%
   );
   background: -webkit-linear-gradient(
-    top,
+    to top,
     rgba(254, 231, 154, 1) 0%,
     rgba(254, 193, 81, 1) 100%
   );
   background: -o-linear-gradient(
-    top,
+    to top,
     rgba(254, 231, 154, 1) 0%,
     rgba(254, 193, 81, 1) 100%
   );
   background: -ms-linear-gradient(
-    top,
+    to top,
     rgba(254, 231, 154, 1) 0%,
     rgba(254, 193, 81, 1) 100%
   );
   background: linear-gradient(
-    top,
+    to top,
     rgba(254, 231, 154, 1) 0%,
     rgba(254, 193, 81, 1) 100%
   );
@@ -410,27 +410,27 @@ form:after {
 #content form input[type="submit"]:hover {
   background: rgb(254, 193, 81);
   background: -moz-linear-gradient(
-    top,
+    to top,
     rgba(254, 193, 81, 1) 0%,
     rgba(254, 231, 154, 1) 100%
   );
   background: -webkit-linear-gradient(
-    top,
+    to top,
     rgba(254, 193, 81, 1) 0%,
     rgba(254, 231, 154, 1) 100%
   );
   background: -o-linear-gradient(
-    top,
+    to top,
     rgba(254, 193, 81, 1) 0%,
     rgba(254, 231, 154, 1) 100%
   );
   background: -ms-linear-gradient(
-    top,
+    to top,
     rgba(254, 193, 81, 1) 0%,
     rgba(254, 231, 154, 1) 100%
   );
   background: linear-gradient(
-    top,
+    to top,
     rgba(254, 193, 81, 1) 0%,
     rgba(254, 231, 154, 1) 100%
   );
@@ -446,27 +446,27 @@ form:after {
 .button {
   background: rgb(247, 249, 250);
   background: -moz-linear-gradient(
-    top,
+    to top,
     rgba(247, 249, 250, 1) 0%,
     rgba(240, 240, 240, 1) 100%
   );
   background: -webkit-linear-gradient(
-    top,
+    to top,
     rgba(247, 249, 250, 1) 0%,
     rgba(240, 240, 240, 1) 100%
   );
   background: -o-linear-gradient(
-    top,
+    to top,
     rgba(247, 249, 250, 1) 0%,
     rgba(240, 240, 240, 1) 100%
   );
   background: -ms-linear-gradient(
-    top,
+    to top,
     rgba(247, 249, 250, 1) 0%,
     rgba(240, 240, 240, 1) 100%
   );
   background: linear-gradient(
-    top,
+    to top,
     rgba(247, 249, 250, 1) 0%,
     rgba(240, 240, 240, 1) 100%
   );

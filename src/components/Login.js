@@ -2,10 +2,16 @@ import React from 'react';
 import '../styles/login.css'
 class Login extends React.Component {
     state = {  }
+
+    handleChange = (e) => {
+        this.setState({player: e.target.value})
+    }
+    
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Radiiii")
-    }
+        this.props.player(this.state.player, false);
+    };
+
     render() { 
         return ( 
             <div className="container">
@@ -13,7 +19,7 @@ class Login extends React.Component {
                 <form>
                     <h1>Memory Game</h1>
                     <div>
-                        <input type="text" placeholder="Enter your name" required="" id="username" />
+                        <input type="text" onChange={this.handleChange} placeholder="Enter your name" id="username" />
                     </div>
                     <div>
                         <input type="submit" onClick={this.handleSubmit} value="Start" />
