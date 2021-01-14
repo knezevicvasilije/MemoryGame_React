@@ -1,5 +1,4 @@
 import React from 'react';
-import GameInfo from './GameInfo'
 import {cards} from './Cards/cardsArray';
 let fiveTries = 5;
 
@@ -87,10 +86,11 @@ class Cards extends React.Component {
             <div className="cards">{
               /* 
             Ukoliko se na math.random() doda - 0.5 ili bilo sta za random raspored karata, svaki put na "found" sve karte se ponovo izmijesaju (cak i one otkrivene) */}
-                {cards.sort(() => Math.random()).map((el) => {
+                {cards.sort(() => Math.random()).map((el, index) => {
                     return (
                         <div className="card card-blank"
                         cardno={el.cardno}
+                        key={index}
                         style={{background: `url(${el.img})`}}
                         check="false"
                         onClick={this.handleClick}/>

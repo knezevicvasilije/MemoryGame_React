@@ -5,7 +5,7 @@ class GameInfo extends React.Component {
         const {player, score, tries} = this.props;
         return ( 
            
-            <div class="gameInfo">
+            <div className="gameInfo">
                  
                  <div className="info">
                 <div className="player"><h1>Welcome: </h1> <h2>{player}</h2></div>
