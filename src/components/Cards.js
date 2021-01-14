@@ -4,6 +4,7 @@ import {cards} from './Cards/cardsArray';
 let fiveTries = 5;
 
 class Cards extends React.Component {
+
     characters = [];
     handleClick = (event) => {
         let character = event.target;

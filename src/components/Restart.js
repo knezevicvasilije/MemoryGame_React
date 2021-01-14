@@ -7,10 +7,12 @@ handleClick = () => {
 
     render() { 
         return ( 
-            <div>
-                <h2>Game Over</h2>
-                <button onClick={this.handleClick}>Go again</button>
-            
+            <div className="gameOver">
+                <div className="message">
+                <h2>{this.props.message}</h2>
+                 <button class="ui inverted violet basic button"onClick={this.handleClick}>Start!</button>
+                
+                </div>
             </div>
          );
     }

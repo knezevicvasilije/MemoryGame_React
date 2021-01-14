@@ -11,7 +11,9 @@ class App extends React.Component{
     showRestart: false,
     player: "",
     score: 0,
-    tries: 5
+    tries: 5,
+    message: "Wanna try again?",
+    
   }
   handleLogin = (player, boolean) => {
     this.setState({ player: player, showLogin: boolean });
@@ -30,14 +32,15 @@ class App extends React.Component{
   }
  triesDown = () => {
    this.setState({tries: this.state.tries -1})
+ 
  }
   
   render() {
-    const { showLogin, player, score, showRestart, tries } = this.state;
+    const { showLogin, player, score, showRestart, tries, message} = this.state;
     return (
     <div className="App">
         {showLogin ? <Login player={this.handleLogin}/> : null}
-        {showRestart ? <Restart newGame={this.handleRestart} score={score} tries={tries}/> :null }
+        {showRestart ? <Restart newGame={this.handleRestart} score={score} tries={tries} message={message} /> :null }
       <GameInfo player={player} score={score} tries={tries} />
       <PlayBoard restart={this.handleRestart} score={this.scoreUp} tries={this.triesDown}/>
     </div>
