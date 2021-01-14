@@ -4,10 +4,13 @@ class GameInfo extends React.Component {
     render() { 
         const {player, score} = this.props;
         return ( 
+           
             <div>
-                <div>Memory</div>
-                <div>{player}</div>
-                <div>Score: {score}</div>
+                 <div className="memoryGame">Memory</div>
+                 <div className="info">
+                <div className="player"><h1>Welcome: </h1> <h2>{player}</h2></div>
+                <div className="player"><h1>Score: </h1> <h2>{score}</h2></div>
+                </div>
             </div>
          );
     }

@@ -141,6 +141,7 @@ form:after {
   margin: 25px auto;
   position: relative;
   width: 900px;
+  height: 100vh;
 }
 #content {
   background: #f9f9f9;
@@ -355,8 +356,10 @@ form:after {
 #username {
   background-position: 10px 10px !important;
 }
-#password {
-  background-position: 10px -53px !important;
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #content form input[type="submit"] {
   background: rgb(254, 231, 154);

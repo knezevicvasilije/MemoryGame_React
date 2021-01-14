@@ -1,0 +1,31 @@
+.playBoard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 450px;
+  width: 570px;
+}
+.card {
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  height: 120px;
+  width: 120px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card-blank {
+  background: url("../components/Cards/backFlip.png") !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  width: 120px;
+  height: 120px;
+}

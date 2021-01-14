@@ -21,7 +21,7 @@ class Login extends React.Component {
                     <div>
                         <input type="text" onChange={this.handleChange} placeholder="Enter your name" id="username" />
                     </div>
-                    <div>
+                    <div className="button">
                         <input type="submit" onClick={this.handleSubmit} value="Start" />
                     </div>
                 </form>

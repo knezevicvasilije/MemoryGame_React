@@ -18,18 +18,24 @@ class App extends React.Component{
 
   handleRestart = (boolean) => {
     if(boolean){
-      this.setState({showRestart : boolean, score: this.state.score +1 });
+      this.setState({showRestart : boolean});
     }else{
       this.setState({showRestart: boolean})
     }
   }; 
+  scoreUp = (boolean) =>{
+    this.setState({score: this.state.score +1 })
+  }
+ 
   
   render() {
     const { showLogin, player, score, showRestart } = this.state;
     return (
     <div className="App">
         {showLogin ? <Login player={this.handleLogin}/> : null}
+        {showRestart ? <Restart newGame={this.handleRestart} score={score}/> :null }
       <GameInfo player={player} score={score}/>
+      <PlayBoard restart={this.handleRestart} score={this.scoreUp}/>
     </div>
   );
 }}
