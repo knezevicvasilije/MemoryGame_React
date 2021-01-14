@@ -34,6 +34,7 @@ class Cards extends React.Component {
         let allPictures = document.getElementsByClassName("card-blank");
         if (allPictures.length < 1) {
           this.props.restart(true);
+          this.props.score(false)
           let reset = document.getElementsByClassName("card");
           for (let i = 0; i < reset.length; i++) {
             reset[i].classList.add("card-blank");
@@ -67,7 +68,7 @@ class Cards extends React.Component {
     render() { 
         return ( 
             <div className="cards">
-                {cards.sort(() => Math.random()).map((el) => {
+                {cards.sort(() => Math.random() -0.5).map((el) => {
                     return (
                         <div className="card card-blank"
                         cardno={el.cardno}
