@@ -1,3 +1,6 @@
+body {
+  background: url("./components/Cards/background.jpg") !important;
+}
 .App {
   text-align: center;
 }
@@ -12,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: white;
 }
 .player {
   width: 25%;

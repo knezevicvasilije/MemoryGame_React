@@ -19,7 +19,8 @@ class App extends React.Component{
 
   handleRestart = (boolean) => {
     if(boolean){
-      this.setState({showRestart : boolean});
+      this.setState({showRestart : boolean, score:0, tries: 5});
+
     }else{
       this.setState({showRestart: boolean})
     }

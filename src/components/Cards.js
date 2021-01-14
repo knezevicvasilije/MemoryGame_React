@@ -36,6 +36,7 @@ class Cards extends React.Component {
         let allPictures = document.getElementsByClassName("card-blank");
         if (allPictures.length < 1) {
           this.props.restart(true);
+          
           let reset = document.getElementsByClassName("card");
           for (let i = 0; i < reset.length; i++) {
             reset[i].classList.add("card-blank");
@@ -65,7 +66,13 @@ class Cards extends React.Component {
            fiveTries = fiveTries - 0.5;
            console.log(fiveTries)
            if(fiveTries === 0){
-            this.props.restart(true);
+              this.props.restart(true);
+              let reset = document.getElementsByClassName("card");
+              for (let i = 0; i < reset.length; i++) {
+                reset[i].classList.add("card-blank");
+                reset[i].setAttribute("check", "false");
+                this.characters = [];
+              }
            }
             
         }else{
