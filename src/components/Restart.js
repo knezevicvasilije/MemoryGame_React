@@ -3,7 +3,6 @@ import React from 'react';
 class Restart extends React.Component {
 handleClick = () => {
     this.props.newGame(false);
-    
 }
     render() { 
         return ( 

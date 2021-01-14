@@ -10,7 +10,8 @@ class App extends React.Component{
     showLogin: true,
     showRestart: false,
     player: "",
-    score: 0
+    score: 0,
+    tries: 5
   }
   handleLogin = (player, boolean) => {
     this.setState({ player: player, showLogin: boolean });
@@ -23,19 +24,21 @@ class App extends React.Component{
       this.setState({showRestart: boolean})
     }
   }; 
-  scoreUp = (boolean) =>{
+  scoreUp = () =>{
     this.setState({score: this.state.score +1 })
   }
- 
+ triesDown = () => {
+   this.setState({tries: this.state.tries -1})
+ }
   
   render() {
-    const { showLogin, player, score, showRestart } = this.state;
+    const { showLogin, player, score, showRestart, tries } = this.state;
     return (
     <div className="App">
         {showLogin ? <Login player={this.handleLogin}/> : null}
-        {showRestart ? <Restart newGame={this.handleRestart} score={score}/> :null }
-      <GameInfo player={player} score={score}/>
-      <PlayBoard restart={this.handleRestart} score={this.scoreUp}/>
+        {showRestart ? <Restart newGame={this.handleRestart} score={score} tries={tries}/> :null }
+      <GameInfo player={player} score={score} tries={tries} />
+      <PlayBoard restart={this.handleRestart} score={this.scoreUp} tries={this.triesDown}/>
     </div>
   );
 }}

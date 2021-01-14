@@ -1,14 +1,13 @@
 import React from 'react';
 import GameInfo from './GameInfo'
 import {cards} from './Cards/cardsArray';
-
+let fiveTries = 5;
 
 class Cards extends React.Component {
     characters = [];
     handleClick = (event) => {
         let character = event.target;
-        if (character.getAttribute("check") === "found") {
-           
+        if (character.getAttribute("check") === "found") {           
           return;
         }
     
@@ -27,10 +26,13 @@ class Cards extends React.Component {
             this.characters.shift();
             this.characters.shift();
           } else {
+          
             this.characters.shift();
             this.characters.shift();
           }
         }
+      
+        
         let allPictures = document.getElementsByClassName("card-blank");
         if (allPictures.length < 1) {
           this.props.restart(true);
@@ -47,17 +49,25 @@ class Cards extends React.Component {
         if(character1.getAttribute("cardno") === character2.getAttribute("cardno")){
             character1.setAttribute("check", "found");
             character2.setAttribute("check", "found");
-            this.props.score(true)
+            this.props.score()
             return true;
         }
+        this.props.tries()
         return false;
     }
 
-
+   
     switch = (target) => {
+    
         if(target.getAttribute("check") === "true"){
             target.setAttribute("check", "false");
             target.classList.add("card-blank");
+           fiveTries = fiveTries - 0.5;
+           console.log(fiveTries)
+           if(fiveTries === 0){
+            this.props.restart(true);
+           }
+            
         }else{
             target.setAttribute("check", "true");
             target.classList.remove("card-blank")
