@@ -34,7 +34,6 @@ class Cards extends React.Component {
         let allPictures = document.getElementsByClassName("card-blank");
         if (allPictures.length < 1) {
           this.props.restart(true);
-          this.props.score(false)
           let reset = document.getElementsByClassName("card");
           for (let i = 0; i < reset.length; i++) {
             reset[i].classList.add("card-blank");
@@ -67,8 +66,10 @@ class Cards extends React.Component {
 
     render() { 
         return ( 
-            <div className="cards">
-                {cards.sort(() => Math.random() -0.5).map((el) => {
+            <div className="cards">{
+              /* 
+            Ukoliko se na math.random() doda - 0.5 ili bilo sta za random raspored karata, svaki put na "found" sve karte se ponovo izmijesaju (cak i one otkrivene) */}
+                {cards.sort(() => Math.random()).map((el) => {
                     return (
                         <div className="card card-blank"
                         cardno={el.cardno}
