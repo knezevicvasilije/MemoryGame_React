@@ -4,31 +4,31 @@ let fiveTries = 5;
 
 class Cards extends React.Component {
 
-    characters = [];
+    thumbnails = [];
     handleClick = (event) => {
-        let character = event.target;
-        if (character.getAttribute("check") === "found") {           
+        let thumbnail = event.target;
+        if (thumbnail.getAttribute("check") === "found") {           
           return;
         }
     
-        if (character !== this.characters[0]) {
-          this.switch(character);
-          this.characters.push(character);
+        if (thumbnail !== this.thumbnails[0]) {
+          this.switch(thumbnail);
+          this.thumbnails.push(thumbnail);
         } else {
-          this.switch(character);
-          this.characters = [];
+          this.switch(thumbnail);
+          this.thumbnails = [];
         }
     
-        if (this.characters.length > 2) {
-          if (!this.checkNo(this.characters[0], this.characters[1])) {
-            this.switch(this.characters[0]);
-            this.switch(this.characters[1]);
-            this.characters.shift();
-            this.characters.shift();
+        if (this.thumbnails.length > 2) {
+          if (!this.checkNo(this.thumbnails[0], this.thumbnails[1])) {
+            this.switch(this.thumbnails[0]);
+            this.switch(this.thumbnails[1]);
+            this.thumbnails.shift();
+            this.thumbnails.shift();
           } else {
           
-            this.characters.shift();
-            this.characters.shift();
+            this.thumbnails.shift();
+            this.thumbnails.shift();
           }
         }
       
@@ -41,15 +41,15 @@ class Cards extends React.Component {
           for (let i = 0; i < reset.length; i++) {
             reset[i].classList.add("card-blank");
             reset[i].setAttribute("check", "false");
-            this.characters = [];
+            this.thumbnails = [];
           }
         }
       };
 
-    checkNo = (character1, character2) => {
-        if(character1.getAttribute("cardno") === character2.getAttribute("cardno")){
-            character1.setAttribute("check", "found");
-            character2.setAttribute("check", "found");
+    checkNo = (thumbnail1, thumbnail2) => {
+        if(thumbnail1.getAttribute("cardno") === thumbnail2.getAttribute("cardno")){
+            thumbnail1.setAttribute("check", "found");
+            thumbnail2.setAttribute("check", "found");
             this.props.score()
             return true;
         }
@@ -71,7 +71,7 @@ class Cards extends React.Component {
               for (let i = 0; i < reset.length; i++) {
                 reset[i].classList.add("card-blank");
                 reset[i].setAttribute("check", "false");
-                this.characters = [];
+                this.thumbnails = [];
               }
            }
             
